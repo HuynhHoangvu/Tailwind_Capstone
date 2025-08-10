@@ -1,0 +1,1015 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- animate css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- slick -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <!-- fancy box -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <!-- css tailwind -->
+  <link href="./style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./custom.css">
+</head>
+
+<body class="">
+  <!-- Header -->
+  <header class="bg-[#efeae3] rounded-b-[50px] pb-[50px] py-10 z-10">
+    <div class="flex flex-wrap items-center justify-between mx-auto p-4 global-container">
+      <!-- Header-logo -->
+      <a href="">
+        <img src="./img/logo-dark.png" alt="" width="96" height="24">
+      </a>
+      <button data-collapse-toggle="navbar-multi-level" type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-multi-level" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15" />
+        </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row ">
+          <!-- Demo -->
+          <li class="relative">
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownDemo"
+              class="flex items-center justify-between w-full py-2 px-3 md:p-0 md:w-auto">Demo
+              <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
+              </svg></button>
+            <!-- Dropdown menu -->
+            <div id="dropdownDemo"
+              class="absolute left-0 top-full z-10 hidden bg-white rounded-lg shadow-sm w-44 mt-2 ">
+              <ul class="py-2 text-sm" aria-labelledby="dropdownLargeButton">
+                <li>
+                  <a href="#" class="block px-4 py-2">Home 1</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 ">Home 2</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 ">Home 3</a>
+
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 ">Home 4</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- About -->
+          <li>
+            <a href="#" class="block py-2 px-3  md:p-0 ">About</a>
+          </li>
+          <!-- Services -->
+          <li>
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownServices"
+              class="flex items-center justify-between w-full py-2 px-3 md:p-0 md:w-auto">Services
+              <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
+              </svg></button>
+            <!-- Dropdown menu -->
+            <div id="dropdownServices" class="z-10 hidden font-normal bg-white divide-y  rounded-lg shadow-sm w-44 ">
+              <ul class="py-2 text-sm text-gray-700 " aria-labelledby="dropdownLargeButton">
+                <li>
+                  <a href="#" class="block px-4 py-2 ">Services</a>
+                </li>
+
+                <li>
+                  <a href="#" class="block px-4 py-2 ">Service
+                    Detail</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- Pages -->
+          <li>
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownPages"
+              class="flex items-center justify-between w-full py-2 px-3 md:p-0 md:w-auto">Pages
+              <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
+              </svg></button>
+            <!-- Dropdown menu -->
+            <div id="dropdownPages" class="z-10 hidden font-normal bg-white divide-y  rounded-lg shadow-sm w-44 ">
+              <ul class="py-2 text-sm text-gray-700 " aria-labelledby="dropdownLargeButton">
+                <!-- Blogs -->
+                <li aria-labelledby="dropdownNavbarLink">
+                  <button id="doubleDropdownButton" data-dropdown-toggle="Blog" data-dropdown-placement="right-start"
+                    type="button" class="flex items-center justify-between w-full px-4 py-2 ">Blogs<svg
+                      class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 10 6">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 4 4 4-4" />
+                    </svg></button>
+                  <div id="Blog" class="z-10 hidden bg-white divide-y  rounded-lg shadow-sm w-44 dark:bg-gray-700">
+                    <ul class="py-2 text-sm text-gray-700 " aria-labelledby="doubleDropdownButton">
+                      <li>
+                        <a href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600  dark:hover:text-white">Blogs</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600  dark:hover:text-white">Blogs
+                          Detail</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- Team -->
+                <li aria-labelledby="dropdownNavbarLink">
+                  <button id="doubleDropdownButton" data-dropdown-toggle="Team" data-dropdown-placement="right-start"
+                    type="button" class="flex items-center justify-between w-full px-4 py-2 ">Team<svg
+                      class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 10 6">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 4 4 4-4" />
+                    </svg></button>
+                  <div id="Team" class="z-10 hidden bg-white divide-y  rounded-lg shadow-sm w-44 dark:bg-gray-700">
+                    <ul class="py-2 text-sm text-gray-700 " aria-labelledby="doubleDropdownButton">
+                      <li>
+                        <a href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600  dark:hover:text-white">Team</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600  dark:hover:text-white">Team
+                          Detail</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- FAQ -->
+                <li aria-labelledby="dropdownNavbarLink">
+                  <button id="doubleDropdownButton" data-dropdown-toggle="FAQ" data-dropdown-placement="right-start"
+                    type="button" class="flex items-center justify-between w-full px-4 py-2 ">FAQ<svg
+                      class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 10 6">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 4 4 4-4" />
+                    </svg></button>
+                  <div id="FAQ" class="z-10 hidden bg-white divide-y  rounded-lg shadow-sm w-44 dark:bg-gray-700">
+                    <ul class="py-2 text-sm text-gray-700 " aria-labelledby="doubleDropdownButton">
+                      <li>
+                        <a href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600  dark:hover:text-white">FAQ-1</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600  dark:hover:text-white">FAQ-2</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- Portfolio -->
+                <li aria-labelledby="dropdownNavbarLink">
+                  <button id="doubleDropdownButton" data-dropdown-toggle="Portfolio"
+                    data-dropdown-placement="right-start" type="button"
+                    class="flex items-center justify-between w-full px-4 py-2 ">Portfolio<svg class="w-2.5 h-2.5 ms-2.5"
+                      aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 4 4 4-4" />
+                    </svg></button>
+                  <div id="Portfolio" class="z-10 hidden bg-white divide-y  rounded-lg shadow-sm w-44 dark:bg-gray-700">
+                    <ul class="py-2 text-sm text-gray-700 " aria-labelledby="doubleDropdownButton">
+                      <li>
+                        <a href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600  dark:hover:text-white">Portfolio</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600  dark:hover:text-white">Portfolio
+                          Details</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- Pricing -->
+                <li>
+                  <a href="#" class="block px-4 py-2 ">Pricing</a>
+                </li>
+                <!-- Utilites -->
+                <li aria-labelledby="dropdownNavbarLink">
+                  <button id="doubleDropdownButton" data-dropdown-toggle="Utilites"
+                    data-dropdown-placement="right-start" type="button"
+                    class="flex items-center justify-between w-full px-4 py-2 ">Utilites<svg class="w-2.5 h-2.5 ms-2.5"
+                      aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 4 4 4-4" />
+                    </svg></button>
+                  <div id="Utilites" class="z-10 hidden bg-white divide-y  rounded-lg shadow-sm w-44 dark:bg-gray-700">
+                    <ul class="py-2 text-sm text-gray-700 " aria-labelledby="doubleDropdownButton">
+                      <li>
+                        <a href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600  dark:hover:text-white">Error
+                          404</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600  dark:hover:text-white">
+                          Login</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600  dark:hover:text-white">
+                          Signup</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600  dark:hover:text-white">
+                          Reset Password</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- Contact -->
+          <li>
+            <a href="#" class="block py-2 px-3  md:p-0 ">Contact</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- button -->
+      <div class="flex items-center gap-6">
+        <button
+          class="relative overflow-hidden px-5 py-2 rounded-full font-bold transition-colors duration-500 btn-login group border border-black cursor-pointer">
+          <span class="relative z-10 text-black group-hover:text-white transition-colors duration-300">Login</span>
+          <span
+            class="absolute left-0 top-0 w-full h-full bg-[#fe330a] z-0 transition-transform duration-300 translate-y-[-105%] group-hover:translate-y-0"></span>
+        </button>
+
+
+        <button
+          class="relative overflow-hidden border border-black bg-black px-5 py-2 rounded-full font-bold transition-colors duration-500 btn-login group cursor-pointer">
+          <span
+            class="relative z-10 text-white group-hover:text-white transition-colors duration-300 cursor-pointer">Sign
+            up free</span>
+          <span
+            class="absolute left-0 top-0 w-full h-full bg-[#fe330a] z-0 transition-transform duration-300 translate-y-[-105%] group-hover:translate-y-0"></span>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <section class="global-container my-[100px]">
+      <div class="mb-14 flex flex-col items-center text-center lg:mb-20">
+        <h1
+          class="animate__slideInUp animate__animated mb-6 max-w-[1076px] lg:max-w-[1076px] xl:max-w-[1076] transition-all duration-700 text-8xl font-bold mt-[100px]">
+          Simplify your SaaS solution with AI</h1>
+        <p
+          class="animate__slideInUp animate__animated mb-11 max-w-[810px] lg:max-w-[968px] xl:max-w-[1076] transition-all duration-700 text-xl font-bold">
+          Our AI SAAS tool is a cloud-based software delivery model. It helps businesses forecast demand for products
+          and services and optimize inventory management and supply chain operations.</p>
+        <div class="flex items-center gap-6">
+          <!-- button -->
+          <div class="flex items-center gap-6">
+            <button
+              class="relative overflow-hidden border border-black bg-black px-7 py-5 rounded-full font-bold transition-colors duration-500 btn-login group cursor-pointer">
+              <span
+                class="relative z-10 text-white group-hover:text-white transition-colors duration-300 cursor-pointer">Get
+                started for free</span>
+              <span
+                class="absolute left-0 top-0 w-full h-full bg-[#fe330a] z-0 transition-transform duration-300 translate-y-[-105%] group-hover:translate-y-0"></span>
+            </button>
+            <button
+              class="relative overflow-hidden  px-7 py-5 rounded-full font-bold transition-colors duration-500 btn-login group border border-black cursor-pointer">
+              <span class="relative z-10 text-black group-hover:text-white transition-colors duration-300">Learn
+                more</span>
+              <span
+                class="absolute left-0 top-0 w-full h-full bg-[#fe330a] z-0 transition-transform duration-300 translate-y-[-105%] group-hover:translate-y-0"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="animate__slideInUp animate__animated overflow-hidden rounded-2xl bg-black block container">
+        <img src="./img/hero-dashboard.jpg" alt="" width="300" height="640" class="h-auto w-full">
+      </div>
+      <div class="my-10 h-[1px] w-full bg-[#DBD6CF] lg:my-16 xl:my-20"></div>
+      <br class="my-5">
+      <!-- auto slider -->
+      <div class="mx-auto mb-12 max-w-[715px] text-center lg:mb-16">
+        <p class=" text-lg ">Companies of all sizes trust us to find AI SaaS critical to their growth and innovation</p>
+      </div>
+
+      <div class="slider_content ml-8">
+        <div class="slider_item ">
+          <img src="./img/brand-1.png" width="180">
+        </div>
+        <div class="slider_item">
+          <img src="./img/brand-2.png" width="180">
+        </div>
+        <div class="slider_item">
+          <img src="./img/brand-3.png" width="180">
+        </div>
+        <div class="slider_item">
+          <img src="./img/brand-4.png" width="180">
+        </div>
+        <div class="slider_item">
+          <img src="./img/brand-5.png" width="180">
+        </div>
+        <div class="slider_item">
+          <img src="./img/brand-1.png" width="180">
+        </div>
+
+      </div>
+    </section>
+  </header>
+  <!-- Task -->
+  <section class="global-container">
+    <!-- title -->
+    <div class="my-26 ">
+      <div class="md:max-w-sm lg:max-w-xl xl:max-w-[746px]">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold">Core features that make it valuable</h1>
+      </div>
+
+    </div>
+
+    <!-- task-item -->
+    <div class="">
+      <div>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[2px] rounded-[10px] border-2 border-black bg-black">
+
+          <li class="p-[30px] bg-white hover:bg-black hover:text-white transition-all duration-500 group ease-in-out">
+            <div class="mb-9 relative flex justify-start w-[70px] h-[70px]">
+              <!-- Icon đen, ẩn khi hover -->
+              <img src="./img/service-icon-black-1.svg"
+                class="absolute left-0 top-0 h-full w-full transition-all duration-300 ease-linear group-hover:opacity-0"
+                alt="">
+              <!-- Icon cam, hiện khi hover -->
+              <img src="./img/service-icon-orange-1.svg"
+                class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                alt="">
+            </div>
+            <h3 class="mb-4 block text-[28px] hover:text-[#fe330a]">
+              <a href="">Resource Flexibility</a>
+            </h3>
+            <p class="mb-12 text-xl">This is an excellent option for people & small businesses who are starting out.</p>
+            <a href="" class="relative inline-block duration-500  w-[32px] h-[32px]">
+              <img src="./img/arrow-right-black.svg" alt=""
+                class="absolute left-0 bottom-0 h-full w-full transition-all duration-300 ease-linear group-hover:opacity-0">
+              <img src="./img/arrow-right-orange.svg" alt=""
+                class="absolute left-0 bottom-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100">
+            </a>
+          </li>
+          <li class="p-[30px] bg-white hover:bg-black hover:text-white transition-all duration-500 group ease-in-out">
+            <div class="mb-9 relative flex justify-start w-[70px] h-[70px]">
+              <!-- Icon đen, ẩn khi hover -->
+              <img src="./img/service-icon-black-2.svg"
+                class="absolute left-0 top-0 h-full w-full transition-all duration-300 ease-linear group-hover:opacity-0"
+                alt="">
+              <!-- Icon cam, hiện khi hover -->
+              <img src="./img/service-icon-orange-2.svg"
+                class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                alt="">
+            </div>
+            <h3 class="mb-4 block text-[28px] hover:text-[#fe330a]">
+              <a href="">Managed Services</a>
+            </h3>
+            <p class="mb-12 text-xl">This is an excellent option for people & small businesses who are starting out.</p>
+            <a href="" class="relative inline-block duration-500  w-[32px] h-[32px]">
+              <img src="./img/arrow-right-black.svg" alt=""
+                class="absolute left-0 bottom-0 h-full w-full transition-all duration-300 ease-linear group-hover:opacity-0">
+              <img src="./img/arrow-right-orange.svg" alt=""
+                class="absolute left-0 bottom-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100">
+            </a>
+          </li>
+          <li class="p-[30px] bg-white hover:bg-black hover:text-white transition-all duration-500 group ease-in-out">
+            <div class="mb-9 relative flex justify-start w-[70px] h-[70px]">
+              <!-- Icon đen, ẩn khi hover -->
+              <img src="./img/service-icon-black-3.svg"
+                class="absolute left-0 top-0 h-full w-full transition-all duration-300 ease-linear group-hover:opacity-0"
+                alt="">
+              <!-- Icon cam, hiện khi hover -->
+              <img src="./img/service-icon-orange-3.svg"
+                class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                alt="">
+            </div>
+            <h3 class="mb-4 block text-[28px] hover:text-[#fe330a]">
+              <a href="">Web-Based Access</a>
+            </h3>
+            <p class="mb-12 text-xl">This is an excellent option for people & small businesses who are starting out.</p>
+            <a href="" class="relative inline-block duration-500  w-[32px] h-[32px]">
+              <img src="./img/arrow-right-black.svg" alt=""
+                class="absolute left-0 bottom-0 h-full w-full transition-all duration-300 ease-linear group-hover:opacity-0">
+              <img src="./img/arrow-right-orange.svg" alt=""
+                class="absolute left-0 bottom-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100">
+            </a>
+          </li>
+          <li class="p-[30px] bg-white hover:bg-black hover:text-white transition-all duration-500 group ease-in-out">
+            <div class="mb-9 relative flex justify-start w-[70px] h-[70px]">
+              <!-- Icon đen, ẩn khi hover -->
+              <img src="./img/service-icon-black-4.svg"
+                class="absolute left-0 top-0 h-full w-full transition-all duration-300 ease-linear group-hover:opacity-0"
+                alt="">
+              <!-- Icon cam, hiện khi hover -->
+              <img src="./img/service-icon-orange-4.svg"
+                class="absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                alt="">
+            </div>
+            <h3 class="mb-4 block text-[28px] hover:text-[#fe330a]">
+              <a href="">Resource Flexibility</a>
+            </h3>
+            <p class="mb-12 text-xl">This is an excellent option for people & small businesses who are starting out.</p>
+            <a href="" class="relative inline-block duration-500  w-[32px] h-[32px]">
+              <img src="./img/arrow-right-black.svg" alt=""
+                class="absolute left-0 bottom-0 h-full w-full transition-all duration-300 ease-linear group-hover:opacity-0">
+              <img src="./img/arrow-right-orange.svg" alt=""
+                class="absolute left-0 bottom-0 h-full w-full opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- Solution top-->
+  <section class="global-container">
+    <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-center justify-center mt-10 md:mt-20">
+      <!-- left block -->
+      <div class="overflow-hidden rounded-[30px] md:rounded-[50px] w-full md:w-1/2">
+        <img src="./img/content-image-1.jpg" width="1000" height="650" class="w-full h-auto" alt="">
+      </div>
+
+      <!-- right block -->
+      <div class="order-1 md:order-1 w-full md:w-1/2 mt-6 md:mt-0">
+        <!-- title -->
+        <div class="mb-4 md:mb-6 ">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-[80px] font-bold">Accessible to a wider audience</h2>
+        </div>
+        <!-- content -->
+        <div class="pd-[5px] ">
+          <p class="mb-5 text-base sm:text-lg md:text-2xl">Advanced AI capabilities accessible to a broader audience, including small
+            & medium- sized businesses and individuals who may not have the resources or expertise to develop.</p>
+          <p class="mb-5 text-base sm:text-lg md:text-2xl">Advanced AI capabilities accessible to a broader audience, including small
+            & medium- sized businesses and individuals who may not have the resources or expertise to develop.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Solution bot -->
+<section class="global-container">
+  <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-center justify-center mt-10 md:mt-20">
+    
+    <!-- Left block (Text) -->
+    <div class="w-full md:w-1/2 order-1">
+      <!-- Title -->
+      <div class="mb-4 md:mb-6">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-[80px] font-bold">
+          Providing quick deploy solutions
+        </h2>
+      </div>
+      <!-- Content -->
+      <div>
+        <p class="mb-6 text-base sm:text-lg md:text-2xl">
+          Our AI SaaS solutions can be quickly deployed, enabling users to start benefiting
+          from AI capabilities without lengthy setup and development times in fast-paced industries.
+        </p>
+        <ul class="flex flex-col gap-y-4 md:gap-y-5 font-bold text-base sm:text-lg md:text-xl lg:text-[28px] leading-tight">
+          <li class="flex items-start gap-x-3">
+            <img src="./img/check-circle.svg" alt="check-circle" class="w-6 h-6 md:w-[30px] md:h-[30px]">
+            Ready-to-use AI capabilities system
+          </li>
+          <li class="flex items-start gap-x-3">
+            <img src="./img/check-circle.svg" alt="check-circle" class="w-6 h-6 md:w-[30px] md:h-[30px]">
+            Users can quickly integrate AI features
+          </li>
+          <li class="flex items-start gap-x-3">
+            <img src="./img/check-circle.svg" alt="check-circle" class="w-6 h-6 md:w-[30px] md:h-[30px]">
+            Time savings translate to cost savings
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Right block (Image) -->
+    <div class="w-full md:w-1/2 order-2 md:order-2 overflow-hidden rounded-[30px] md:rounded-[50px]">
+      <img src="./img/content-image-2.jpg" alt="Solution Image" class="w-full h-auto object-cover">
+    </div>
+    
+  </div>
+</section>
+
+  <!-- Video play -->
+<section class="mt-10 md:mt-20">
+  <div class="flex flex-col lg:flex-row overflow-hidden rounded-[20px] md:rounded-[50px] bg-black text-white mx-auto max-w-[1500px]">
+    
+    <!-- Left (Video Image) -->
+    <div class="relative w-full lg:w-1/2">
+      <img src="./img/funfact-image.jpg" alt="funfact-image" class="w-full h-full object-cover rounded-none lg:rounded-l-[50px]">
+      
+      <!-- Play Button -->
+      <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=3nQNiWdeH2Q"
+        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div
+          class="relative flex h-[80px] w-[80px] md:h-[120px] md:w-[120px] items-center justify-center rounded-full border-4 border-black bg-white text-black font-bold hover:bg-[#fe330a] hover:text-white transition">
+          Play
+          <div class="absolute h-[110%] w-[110%] animate-ping rounded-full bg-gray-500 opacity-30"></div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Right (Content) -->
+    <div class="flex flex-col justify-center w-full lg:w-1/2 px-6 md:px-12 py-8">
+      <!-- Title -->
+      <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-[60px] font-bold mb-4">
+        Play AI-powered tools that streamline tasks
+      </h2>
+      <!-- Description -->
+      <p class="text-base sm:text-lg md:text-xl mb-6 max-w-xl">
+        As your business grows or your AI SaaS needs change, you can easily adjust your subscription level to match those needs. This flexibility ensures that AI remains an asset.
+      </p>
+      <!-- Divider -->
+      <div class="my-6 md:my-10 h-[1px] bg-gray-500 opacity-50 w-full"></div>
+      <!-- Counter -->
+      <div class="flex flex-col sm:flex-row justify-start gap-8">
+        <div class="text-center sm:text-left">
+          <h3 class="text-[50px] md:text-[80px] font-bold text-[#fe330a] leading-none">92%</h3>
+          <p class="text-base sm:text-lg text-gray-200 mt-2">Customer service inquiries</p>
+        </div>
+        <div class="text-center sm:text-left">
+          <h3 class="text-[50px] md:text-[80px] font-bold text-[#fe330a] leading-none">75%</h3>
+          <p class="text-base sm:text-lg text-gray-200 mt-2">Using financial institutions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Cost -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4 text-center ">
+
+      <h2 class="text-3xl sm:text-4xl md:text-6xl lg:text-[80px] font-bold mb-4 sm:mb-6 lg:mb-8 leading-tight">Cost-effectively build any software</h2>
+      <!-- Tabs -->
+      <div class="mb-8 ">
+        <ul class="inline-flex justify-center text-sm font-medium rounded-[50px] border-2 border-black "
+          id="pricing-tab" data-tabs-toggle="#pricing-tab-content" role="tablist">
+          <li role="presentation">
+            <button class="inline-block px-6 py-2 rounded-t-lg tab-button price-button active" id="monthly-tab"
+              data-tabs-target="#monthly" type="button" role="tab" aria-controls="monthly"
+              aria-selected="true">Monthly</button>
+          </li>
+          <li role="presentation">
+            <button class="inline-block px-6 py-2 rounded-t-lg tab-button price-button " id="annually-tab"
+              data-tabs-target="#annually" type="button" role="tab" aria-controls="annually"
+              aria-selected="false">Annually</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Tabs content -->
+      <div id="pricing-tab-content" class="max-w-6xl mx-auto">
+        <!-- Monthly -->
+        <div class="p-4" id="monthly" role="tabpanel" aria-labelledby="monthly-tab">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+            <!-- Card 1 -->
+            <div
+              class="bg-[#efeae3] text-black rounded-lg p-6 shadow hover:bg-black hover:text-white group transition-all duration-500 flex flex-col h-full">
+              <h3 class="text-lg font-semibold mb-2">Beginner</h3>
+              <p class="text-sm mb-4">Up to 10 members</p>
+              <div class="my-5 h-[1px] w-full bg-[#DBD6CF]"></div>
+              <p class="text-4xl font-bold mb-4">$25<span class="text-lg">/Per month</span></p>
+              <!-- Nội dung mô tả có flex-grow -->
+              <p class="text-sm mb-6 flex-grow">This is an excellent option for people & small businesses who are
+                starting out.</p>
+              <!-- Button -->
+              <button
+                class="w-full py-3 border rounded-full group-hover:border-[#fe330a] relative overflow-hidden transition-colors duration-500 group/button cursor-pointer">
+                <span class="relative z-10">Choose the plan</span>
+                <span
+                  class="absolute left-0 top-0 w-full h-full bg-[#fe330a] z-0 transition-transform duration-500 translate-y-[-105%] group-hover/button:translate-y-0"></span>
+              </button>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="bg-[#efeae3] text-black rounded-lg p-6 shadow hover:bg-black hover:text-white group transition-all duration-500 flex flex-col h-full">
+              <h3 class="text-lg font-semibold mb-2">Starter</h3>
+              <p class="text-sm mb-4">Up to 50 members</p>
+              <div class="my-5 h-[1px] w-full bg-[#DBD6CF]"></div>
+              <p class="text-4xl font-bold mb-4">$89<span class="text-lg">/Per month</span></p>
+              <p class="text-sm mb-6 flex-grow">This plan is suitable for e-commerce stores as well as professional
+                blogs.</p>
+              <button
+                class="w-full py-3 border rounded-full group-hover:border-[#fe330a] relative overflow-hidden transition-colors duration-500 group/button cursor-pointer">
+                <span class="relative z-10">Choose the plan</span>
+                <span
+                  class="absolute left-0 top-0 w-full h-full bg-[#fe330a] z-0 transition-transform duration-500 translate-y-[-105%] group-hover/button:translate-y-0"></span>
+              </button>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="bg-[#efeae3] text-black rounded-lg p-6 shadow hover:bg-black hover:text-white group transition-all duration-500 flex flex-col h-full">
+              <h3 class="text-lg font-semibold mb-2">Pro</h3>
+              <p class="text-sm mb-4">Up to 100 members</p>
+              <div class="my-5 h-[1px] w-full bg-[#DBD6CF]"></div>
+              <p class="text-4xl font-bold mb-4">$199<span class="text-lg">/Per month</span></p>
+              <p class="text-sm mb-6 flex-grow">Ideal for handling complicated projects enterprise-level projects, and
+                websites.</p>
+              <button
+                class="w-full py-3 border rounded-full group-hover:border-[#fe330a] relative overflow-hidden transition-colors duration-500 group/button cursor-pointer">
+                <span class="relative z-10">Choose the plan</span>
+                <span
+                  class="absolute left-0 top-0 w-full h-full bg-[#fe330a] z-0 transition-transform duration-500 translate-y-[-105%] group-hover/button:translate-y-0"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Annually -->
+        <div class="hidden p-4" id="annually" role="tabpanel" aria-labelledby="annually-tab">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+            <!-- Card 1 -->
+            <div
+              class="bg-[#efeae3] text-black rounded-lg p-6 shadow hover:bg-black hover:text-white group transition-all duration-500 flex flex-col h-full">
+              <h3 class="text-lg font-semibold mb-2">Beginner</h3>
+              <p class="text-sm mb-4">Up to 10 members</p>
+              <div class="my-5 h-[1px] w-full bg-[#DBD6CF]"></div>
+              <p class="text-4xl font-bold mb-4">$240<span class="text-lg">/Per month</span></p>
+              <!-- Nội dung mô tả có flex-grow -->
+              <p class="text-sm mb-6 flex-grow">This is an excellent option for people & small businesses who are
+                starting out.</p>
+              <!-- Button -->
+              <button
+                class="w-full py-3 border rounded-full group-hover:border-[#fe330a] relative overflow-hidden transition-colors duration-500 group/button cursor-pointer">
+                <span class="relative z-10">Choose the plan</span>
+                <span
+                  class="absolute left-0 top-0 w-full h-full bg-[#fe330a] z-0 transition-transform duration-500 translate-y-[-105%] group-hover/button:translate-y-0"></span>
+              </button>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="bg-[#efeae3] text-black rounded-lg p-6 shadow hover:bg-black hover:text-white group transition-all duration-500 flex flex-col h-full">
+              <h3 class="text-lg font-semibold mb-2">Starter</h3>
+              <p class="text-sm mb-4">Up to 50 members</p>
+              <div class="my-5 h-[1px] w-full bg-[#DBD6CF]"></div>
+              <p class="text-4xl font-bold mb-4">$960<span class="text-lg">/Per month</span></p>
+              <p class="text-sm mb-6 flex-grow">This plan is suitable for e-commerce stores as well as professional
+                blogs.</p>
+              <button
+                class="w-full py-3 border rounded-full group-hover:border-[#fe330a] relative overflow-hidden transition-colors duration-500 group/button cursor-pointer">
+                <span class="relative z-10">Choose the plan</span>
+                <span
+                  class="absolute left-0 top-0 w-full h-full bg-[#fe330a] z-0 transition-transform duration-500 translate-y-[-105%] group-hover/button:translate-y-0"></span>
+              </button>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="bg-[#efeae3] text-black rounded-lg p-6 shadow hover:bg-black hover:text-white group transition-all duration-500 flex flex-col h-full">
+              <h3 class="text-lg font-semibold mb-2">Pro</h3>
+              <p class="text-sm mb-4">Up to 100 members</p>
+              <div class="my-5 h-[1px] w-full bg-[#DBD6CF]"></div>
+              <p class="text-4xl font-bold mb-4">$1800<span class="text-lg">/Per month</span></p>
+              <p class="text-sm mb-6 flex-grow">Ideal for handling complicated projects enterprise-level projects, and
+                websites.</p>
+              <button
+                class="w-full py-3 border rounded-full group-hover:border-[#fe330a] relative overflow-hidden transition-colors duration-500 group/button cursor-pointer">
+                <span class="relative z-10">Choose the plan</span>
+                <span
+                  class="absolute left-0 top-0 w-full h-full bg-[#fe330a] z-0 transition-transform duration-500 translate-y-[-105%] group-hover/button:translate-y-0"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ASK -->
+  <section class="global-container flex flex-col md:flex-row gap-8 md:gap-16 mt-10 md:mt-20">
+    <!-- Left -->
+    <div class="w-full md:w-1/2">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
+        Freely ask us <br> for more information
+      </h2>
+      <p class="mt-4 mb-6 text-base sm:text-lg md:text-xl text-gray-600">
+        Our AI SaaS solutions can be quickly deployed, enabling users to start benefiting from AI capabilities without
+        lengthy setup and development times in fast-paced industries.
+      </p>
+      <button
+        class="relative overflow-hidden px-6 py-3 rounded-full font-semibold transition-colors duration-500 text-white bg-black group cursor-pointer">
+        <span class="relative z-10 transition-colors duration-300">Ask your questions</span>
+        <span
+          class="absolute left-0 top-0 w-full h-full bg-[#fe330a] z-0 transition-transform duration-300 translate-y-[-105%] group-hover:translate-y-0"></span>
+      </button>
+    </div>
+
+    <!-- Right -->
+    <div class="w-full max-w-xl">
+      <!-- Accordion Container -->
+      <div class="border-t border-gray-200 divide-y divide-gray-200">
+        <!-- Item 1 -->
+        <div>
+          <button type="button"
+            class="flex w-full items-center justify-between py-5 text-lg font-semibold text-black hover:text-[#fe330a]"
+            onclick="toggleAccordion(this)">
+            <span>How do I start AI SaaS?</span>
+            <span class="text-2xl transition-transform">+</span>
+          </button>
+          <div class="hidden pb-5 text-gray-600">
+            Go to our official website and create an account. You'll need to provide some basic information and agree to
+            our terms and conditions.
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div>
+          <button type="button"
+            class="flex w-full items-center justify-between py-5 text-lg font-semibold text-black hover:text-[#fe330a]"
+            onclick="toggleAccordion(this)">
+            <span>Can I customize AI SaaS solutions?</span>
+            <span class="text-2xl transition-transform">+</span>
+          </button>
+          <div class="hidden pb-5 text-gray-600">
+            Yes, you can customize the AI SaaS solutions based on your needs. Our platform offers flexible options.
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div>
+          <button type="button"
+            class="flex w-full items-center justify-between py-5 text-lg font-semibold text-black hover:text-[#fe330a]"
+            onclick="toggleAccordion(this)">
+            <span>How can AI benefit my business?</span>
+            <span class="text-2xl transition-transform">+</span>
+          </button>
+          <div class="hidden pb-5 text-gray-600">
+            AI helps streamline operations, improve decision-making, and reduce costs by automating processes and
+            analyzing data efficiently.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FeedBack -->
+  <section class=" bg-black text-white mt-[150px] pb-[100px]">
+    <div class="global-container">
+      <!-- title -->
+      <h1 class="text-7xl font-bold py-[50px]">Positive feedback from our users</h1>
+      <div>
+        <!-- card -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+          <!-- Card 1 -->
+          <div class="flex flex-col gap-4 rounded-xl border border-gray-700 bg-[#111] p-6 hover:shadow-lg transition">
+            <!-- Rating -->
+            <div class="text-red-500 text-xl">★★★★★</div>
+            <!-- Content -->
+            <p class="text-gray-300 leading-relaxed">
+              “This AI SaaS tool has revolutionized the way we process and analyze data. This is a game-changer for our
+              business.”
+            </p>
+            <!-- Bottom -->
+            <div class="flex items-center gap-4 mt-4">
+              <img src="./img/testimonial-img-1.jpg" class="h-12 w-12 rounded-full object-cover" alt="User">
+              <div>
+                <p class="font-semibold text-white">Max Weber</p>
+                <p class="text-gray-400 text-sm">HR Manager</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="flex flex-col gap-4 rounded-xl border border-gray-700 bg-[#111] p-6 hover:shadow-lg transition">
+            <div class="text-red-500 text-xl">★★★★★</div>
+            <p class="text-gray-300 leading-relaxed">
+              "It answers immediately, and we've seen a significant reduction in response time. Our customers love it
+              and so do we!"
+            </p>
+            <div class="flex items-center gap-4 mt-4">
+              <img src="./img/testimonial-img-2.jpg" class="h-12 w-12 rounded-full object-cover" alt="User">
+              <div>
+                <p class="font-semibold text-white">Douglas Smith</p>
+                <p class="text-gray-400 text-sm">Businessman</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="flex flex-col gap-4 rounded-xl border border-gray-700 bg-[#111] p-6 hover:shadow-lg transition">
+            <div class="text-red-500 text-xl">★★★★★</div>
+            <p class="text-gray-300 leading-relaxed">
+              "It is accurate, fast and supports multiple languages. It is a must for any international business
+              success."
+            </p>
+            <div class="flex items-center gap-4 mt-4">
+              <img src="./img/testimonial-img-3.jpg" class="h-12 w-12 rounded-full object-cover" alt="User">
+              <div>
+                <p class="font-semibold text-white">Abraham Maslo</p>
+                <p class="text-gray-400 text-sm">Founder @ Marketing Company</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="flex flex-col gap-4 rounded-xl border border-gray-700 bg-[#111] p-6 hover:shadow-lg transition">
+            <div class="text-red-500 text-xl">★★★★★</div>
+            <p class="text-gray-300 leading-relaxed">
+              "It is accurate, fast and supports multiple languages. It is a must for any international business
+              success."
+            </p>
+            <div class="flex items-center gap-4 mt-4">
+              <img src="./img/testimonial-img-3.jpg" class="h-12 w-12 rounded-full object-cover" alt="User">
+              <div>
+                <p class="font-semibold text-white">Abraham Maslo</p>
+                <p class="text-gray-400 text-sm">Founder @ Marketing Company</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="flex flex-col gap-4 rounded-xl border border-gray-700 bg-[#111] p-6 hover:shadow-lg transition">
+            <div class="text-red-500 text-xl">★★★★★</div>
+            <p class="text-gray-300 leading-relaxed">
+              "It is accurate, fast and supports multiple languages. It is a must for any international business
+              success."
+            </p>
+            <div class="flex items-center gap-4 mt-4">
+              <img src="./img/testimonial-img-3.jpg" class="h-12 w-12 rounded-full object-cover" alt="User">
+              <div>
+                <p class="font-semibold text-white">Abraham Maslo</p>
+                <p class="text-gray-400 text-sm">Founder @ Marketing Company</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="flex flex-col gap-4 rounded-xl border border-gray-700 bg-[#111] p-6 hover:shadow-lg transition">
+            <div class="text-red-500 text-xl">★★★★★</div>
+            <p class="text-gray-300 leading-relaxed">
+              "It is accurate, fast and supports multiple languages. It is a must for any international business
+              success."
+            </p>
+            <div class="flex items-center gap-4 mt-4">
+              <img src="./img/testimonial-img-3.jpg" class="h-12 w-12 rounded-full object-cover" alt="User">
+              <div>
+                <p class="font-semibold text-white">Abraham Maslo</p>
+                <p class="text-gray-400 text-sm">Founder @ Marketing Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Footer-top -->
+   <div class="bg-black">
+  <div class="bg-[#f5f0e8] py-16  rounded-t-[50px]">
+    <div class="overflow-hidden">
+      <!-- Marquee -->
+      <div class="flex animate-marquee whitespace-nowrap">
+        <!-- Item -->
+        <div class="flex items-center gap-x-6 mx-12">
+          <img src="./img/footer-text-slider-icon.svg" alt="icon" class="h-8 w-8 lg:h-12 lg:w-12">
+          <span class="font-dmSans text-4xl lg:text-6xl font-bold text-black"> Start building software</span>
+        </div>
+        <!-- Item -->
+        <div class="flex items-center gap-x-9 mx-12">
+          <img src="./img/footer-text-slider-icon.svg" alt="icon" class="h-8 w-8 lg:h-12 lg:w-12">
+          <span class="font-dmSans text-4xl lg:text-6xl font-bold text-black"> Start building software</span>
+        </div>
+        <!-- Item -->
+        <div class="flex items-center gap-x-9 mx-12">
+          <img src="./img/footer-text-slider-icon.svg" alt="icon" class="h-8 w-8 lg:h-12 lg:w-12">
+          <span class="font-dmSans text-4xl lg:text-6xl font-bold text-black"> Start building software</span>
+        </div>
+        <!-- Item -->
+        <div class="flex items-center gap-x-9 mx-12">
+          <img src="./img/footer-text-slider-icon.svg" alt="icon" class="h-8 w-8 lg:h-12 lg:w-12">
+          <span class="font-dmSans text-4xl lg:text-6xl font-bold text-black "> Start building software</span>
+        </div>
+        <!-- Item -->
+        <div class="flex items-center gap-x-9 mx-12">
+          <img src="./img/footer-text-slider-icon.svg" alt="icon" class="h-8 w-8 lg:h-12 lg:w-12">
+          <span class="font-dmSans text-4xl lg:text-6xl font-bold text-black "> Start building software</span>
+        </div>
+      </div>
+    </div>
+  </div>
+   </div>
+
+  <!-- Footer-bottom -->
+<footer class="bg-[#f5f0e8] py-12 border-t border-gray-300">
+  <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+    <!-- Cột 1: Logo + mô tả -->
+    <div>
+      <h2 class="text-xl font-bold flex items-center gap-2">
+        ✦ Azle
+      </h2>
+      <p class="mt-3 text-gray-700 text-sm leading-relaxed">
+        Our mission is to harness the power of AI to solve complex business challenges & decision-makers with
+        data-driven insights, and enhance user experiences across digital platforms.
+      </p>
+      <p class="mt-3 text-gray-500 text-sm">
+        Website: <a href="#" class="underline">www.example.com</a>
+      </p>
+    </div>
+
+    <!-- Cột 2: Primary Pages -->
+    <div>
+      <h3 class="font-semibold text-black mb-4">Primary Pages</h3>
+      <ul class="space-y-2 text-gray-700">
+        <li><a href="#" class="hover:text-black">Home</a></li>
+        <li><a href="#" class="hover:text-black">About Us</a></li>
+        <li><a href="#" class="hover:text-black">Services</a></li>
+        <li><a href="#" class="hover:text-black">Pricing</a></li>
+        <li><a href="#" class="hover:text-black">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 3: Utility Pages -->
+    <div>
+      <h3 class="font-semibold text-black mb-4">Utility Pages</h3>
+      <ul class="space-y-2 text-gray-700">
+        <li><a href="#" class="hover:text-black">Signup</a></li>
+        <li><a href="#" class="hover:text-black">Login</a></li>
+        <li><a href="#" class="hover:text-black">404 Not Found</a></li>
+        <li><a href="#" class="hover:text-black">Password Reset</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 4: Newsletter -->
+    <div>
+      <h3 class="font-semibold text-black mb-4">Subscribe To Our Newsletter</h3>
+      <form class="flex items-center bg-white border border-gray-400 rounded-full overflow-hidden">
+        <input type="email" placeholder="Enter your email"
+          class="flex-1 px-4 py-2 text-sm focus:outline-none">
+        <button type="submit" class="bg-black text-white px-4 py-2">
+          →
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="mt-10 text-center text-gray-600 text-sm">
+    © Copyright 2025, All Rights Reserved by Mthemeus
+  </div>
+</footer>
+  <!--  waypoints -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+    integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- countUp -->
+  <script src="./js/jquery.countup.min.js"></script>
+  <script> $('.counter').countUp();</script>
+  <!-- slick -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+
+  </script>
+  <!-- main js -->
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.3.0/dist/flowbite.min.js"></script>
+
+  <!-- js -->
+  <script>
+  // Dùng cho tất cả dropdown, auto nhận đúng id
+document.querySelectorAll('[data-dropdown-toggle]').forEach(btn => {
+  const dropdownId = btn.getAttribute('data-dropdown-toggle');
+  const dropdown = document.getElementById(dropdownId);
+
+  // Khi hover vào nút
+  btn.addEventListener('mouseenter', () => {
+    dropdown.classList.remove('hidden');
+  });
+  // Khi rời khỏi nút, nếu không vào dropdown thì đóng
+  btn.addEventListener('mouseleave', (e) => {
+    // Đợi xem có vào dropdown không
+    setTimeout(() => {
+      if (!dropdown.matches(':hover') && !btn.matches(':hover')) {
+        dropdown.classList.add('hidden');
+      }
+    }, 80);
+  });
+  // Hover vào dropdown thì giữ nguyên, rời ra thì đóng lại
+  dropdown.addEventListener('mouseleave', () => {
+    dropdown.classList.add('hidden');
+  });
+  dropdown.addEventListener('mouseenter', () => {
+    dropdown.classList.remove('hidden');
+  });
+});
+
+ </script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

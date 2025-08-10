@@ -1,0 +1,49 @@
+.global-container {
+  margin: 0 auto;
+  max-width: 1332px;
+  padding: 0 1rem;
+}
+.absolute {
+  position: absolute;
+}
+.left-0 {
+  left: 0;
+}
+.top-full {
+  top: 100%;
+}
+.mt-2 {
+  margin-top: 0.5rem;
+}
+  
+.price-button {
+  display: inline-block;
+  padding: 15px 2.5rem;
+  border-radius: 9999px; /* Full rounded */
+  font-family: Inter, sans-serif;
+  border: 1px solid transparent;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.price-button.active {
+  background-color: #000;
+  color: #fff;
+  transform: scale(1.05); /* hiệu ứng phóng nhẹ */
+}
+
+.price-button:not(.active):hover {
+  background-color: #f3f4f6;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 5s linear infinite;
+}
